@@ -1,20 +1,20 @@
-const express = require('express');
-const jwt = require('jsonwebtoken');
-const { body, validationResult } = require('express-validator');
-const cors = require('cors');
+import express, { urlencoded, json } from 'express';
+import jwt from 'jsonwebtoken';
+import { body, validationResult } from 'express-validator';
+import cors from 'cors';
 
 const app = express();
 
 const SECRET_KEY = 'MARQUEE_SECRET_KEY';
 
-app.use(express.urlencoded({ extended: true }));
+app.use(urlencoded({ extended: true }));
 app.use(
   cors({
     origin: "*",
   })
 );
 app.use(
-  express.json()
+  json()
   );
 app.post('/api/login', [
   body('username').trim().isLength({ min: 1 }),
@@ -27,7 +27,7 @@ app.post('/api/login', [
   const { username, password } = req.body;
 
   if (username === 'narendra' && password === '123456') {
-    const token = jwt.sign({ username }, SECRET_KEY, { expiresIn: '1h' });
+    const token = sign({ username }, SECRET_KEY, { expiresIn: '1h' });
 
     res.json({ token });
   } else {

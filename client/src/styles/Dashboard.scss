@@ -1,0 +1,83 @@
+// Dashboard.scss
+
+  .dashboard-container {
+    padding: 0 15px;
+  }
+  
+  .dashboard-heading {
+   
+  }
+  
+  .logout-button {
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .todo-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .todo-input {
+    width: 35%;
+    height: 1.5rem;
+    border-width: thin;
+    padding: 0 10px;
+    border-radius: 50px 0 0 50px;
+  }
+  
+  .todo-button {
+    height: 1.63rem;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 50px 50px 0;
+    font-size: 14px;
+  }
+  
+  .todo-list {
+    display: flex;
+    margin-top: 2%;
+    flex-direction: column;
+    padding: 1%;
+    max-height: 65vh;
+    overflow-y: auto;
+    width: 60%;
+  }
+  
+  .todo-item {
+    list-style-type: disc;
+    margin-left: 5px;
+    flex-direction: column;
+  }
+  
+  .subtask-form {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 1rem;
+  }
+  
+  .subtask-input {
+    width: 75%;
+    height: 1.5rem;
+    border-width: thin;
+    padding: 0 10px;
+    border-radius: 50px 0 0 50px;
+  }
+  
+  .subtask-button {
+    height: 1.6rem;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0 50px 50px 0;
+    font-size: 14px;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

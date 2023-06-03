@@ -1,6 +1,7 @@
 import React, { createContext, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import marqueeServer from '../api';
 
 const AuthContext = createContext();
 
@@ -11,7 +12,7 @@ const AuthProvider = ({ children }) => {
 
     const login = async (username, password) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/login', { username, password });
+            const response = await marqueeServer.post('/api/login', { username, password });
             const { token } = response.data;
             setToken(token);
             localStorage.setItem('token', token);

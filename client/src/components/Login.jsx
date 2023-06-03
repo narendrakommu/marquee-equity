@@ -4,7 +4,7 @@ import { AuthContext } from '../contexts/AuthContext';
 import '../styles/Login.scss';
 
 const Login = () => {
-    const { token, login } = useContext(AuthContext);
+    const { token, login, error } = useContext(AuthContext);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
@@ -37,6 +37,7 @@ const Login = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
+                {error && <p className='login-error'>{error}</p>}
                 <button className="login-button" type="submit">Login</button>
             </form>
         </div>

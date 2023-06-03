@@ -20,7 +20,6 @@ const AuthProvider = ({ children }) => {
         } catch (error) {
             setToken(null);
             setError('Invalid credentials. Please try again.');
-            alert("Invalid Credentials!");
         }
     };
 
